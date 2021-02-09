@@ -1,0 +1,580 @@
+body {
+  width: 100%;
+  /* overflow: hidden; */
+  margin: 0;
+  /* background: black; */
+}
+
+header {
+  background-image: url(../img/海2.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  height: 80vh;
+}
+
+nav {
+  position: absolute;
+  z-index: 999;
+  width: 100%;
+  top: 0;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+nav ul {
+  /* background: darkcyan; */
+  list-style: none;
+  text-align: right;
+}
+
+nav ul li {
+  /* background: tomato; */
+  display: inline;
+  margin-right: 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+}
+
+main {
+  position: relative;
+  width: 100%;
+}
+
+h1 {
+  text-align: end;
+  width: 90%;
+  list-style: none;
+  position: absolute;
+  z-index: 999;
+  padding-left: 0;
+  top: 30%;
+  color: white;
+  font-weight: lighter;
+  animation: top;
+  animation-duration: 2s;
+  /* animation-delay: ; */
+  /* opacity: 0; */
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes top {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.first {
+  text-align: right;
+  width: 90%;
+  list-style: none;
+  position: absolute;
+  z-index: 999;
+  padding-left: 0;
+  top: 7%;
+}
+
+.first li {
+  display: inline;
+  font-size: x-large;
+  color: white;
+}
+
+.calumn {
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.scroll {
+  display: block;
+  margin: 0 auto;
+  width: 70px;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.scroll:hover {
+  color: #c1a250;
+  transition: 0.5s;
+}
+
+.scroll figure {
+  animation-name: updown;
+  animation-iteration-count: infinite;
+  animation-duration: 1.5s;
+  /* background: darkred; */
+  text-align: center;
+  width: 100%;
+  margin-left: 0;
+}
+
+.scroll figure img {
+  width: 35px;
+  /* background: cyan; */
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.about {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 70px;
+}
+
+.about img {
+  width: 250px;
+}
+
+@media screen and (max-width:767px) {
+  .about {
+    flex-direction: column;
+  }
+
+  .about img {
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+    object-position: 0 50%;
+    margin: 0 auto;
+  }
+}
+
+.about p {
+  display: block;
+  flex-direction: column;
+  line-height: 3rem;
+  font-size: x-large;
+}
+
+.about p::before {
+  content: "ユウマ";
+  display: block;
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.about p a {
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.about p a i:hover {
+  opacity: 0.8;
+  animation-name: rotate;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+
+.about p a:first-child:visited {
+  color: purple;
+}
+
+.about p a:last-child:visited {
+  text-decoration: none;
+  color: skyblue;
+}
+
+.service {
+  background-image: url(../img/コード.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  filter: grayscale(50%);
+  padding-top: 30px;
+}
+
+.service h2 {
+  color: white;
+  text-align: center;
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.service-line {
+  margin: 0 auto;
+  justify-content: space-around;
+  /* background: chartreuse; */
+  color: white;
+  display: flex;
+  list-style: none;
+}
+
+.service .service-line li:nth-of-type(1):after {
+  content: "html";
+  display: block;
+  text-align: center;
+  font-size: x-large;
+  font-weight: bold;
+}
+.service .service-line li:nth-of-type(2):after {
+  content: "CSS";
+  display: block;
+  text-align: center;
+  font-size: x-large;
+  font-weight: bold;
+}
+.service .service-line li:nth-of-type(3):after {
+  content: "jQuery";
+  display: block;
+  text-align: center;
+  font-size: x-large;
+  font-weight: bold;
+}
+.service .service-line li:nth-of-type(4):after {
+  content: "Writing";
+  display: block;
+  text-align: center;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.write {
+  display: flex;
+  justify-content: center;
+} 
+
+@media screen and (max-width:767px) {
+  .write {
+    flex-direction: column;
+  }
+}
+
+.service-others {
+  color: white;
+  position: relative;
+  list-style: none;
+  font-size: x-large;
+  font-weight: bold;
+  line-height: 50px;
+}
+
+@media screen and (max-width:767px) {
+  .service-others {
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+}
+.service-others li::before {
+  content: "✔";
+  color: aquamarine;
+  font-size: xx-large;
+}
+
+.service p {
+  margin-left: 100px;
+  width: 40%;
+  font-size: large;
+  margin-top: 50px;
+  color: white;
+  line-height: 40px;
+} 
+
+@media screen and (max-width:767px) {
+  .service p {
+    width: 90%;
+    margin: 20px auto;
+  }
+}
+
+.work figure:first-child img {
+  width: 300px;
+  height: 250px;
+  object-fit: cover;
+  object-position: 0 0;
+}
+
+.work figure:first-child img:checked {
+  width: auto;
+  height: auto;
+}
+
+
+#container {
+  display: grid;
+  grid-template-rows: 180px 30px 180px;
+  grid-template-columns: 1fr 300px 20px 300px 20px 300px 1fr;
+}
+
+#container figure {
+  margin: 0;
+  overflow: hidden;
+}
+
+
+.luminous {
+  width: 100%;
+  position: relative;
+  display: block;
+}
+
+.luminous::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 1.5em;
+  height: 1.5em;
+  background-color: rgba(0,0,0,0.5);
+  background-image: url(../img/虫メガネ.png);
+  background-size: 1.5em 1.5em;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+figure a img {
+  width: 108%;
+  height: 100%;
+}
+
+figure a img:hover {
+  transform: scale(1.1);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+/* アイテム */
+#itemA {
+  grid-row: 1 ;
+  grid-column: 2;
+}
+#itemB {
+  grid-row: 1 ;
+  grid-column: 4 ;
+}
+#itemC {
+  grid-row: 1;
+  grid-column:  6;
+}
+#itemD {
+  grid-row: 3;
+  grid-column:  2;
+}
+#itemE {
+  grid-row: 3;
+  grid-column:  4;
+}
+
+@media screen and (max-width:767px) {
+  #container {
+    display: grid;
+    grid-template-rows: 180px 30px 180px 30px 180px 30px 180px 30px 180px 30px 180px;
+    grid-template-columns: 1fr 300px 1fr;
+  }
+  #itemA {
+    grid-row: 1 ;
+    grid-column: 2;
+  }
+  #itemB {
+    grid-row: 3 ;
+    grid-column: 2;
+  }
+  #itemC {
+    grid-row: 5;
+    grid-column:  2;
+  }
+  #itemD {
+    grid-row: 7;
+    grid-column:  2;
+  }
+  #itemE {
+    grid-row: 9;
+    grid-column:  2;
+  }
+}
+
+.works {
+  text-align: center;
+  font-size: xx-large;
+}
+
+.work {
+  background-image: url(../img/白.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
+
+.works::after {
+  content: "過去の作品の一部を紹介します";
+  display: block;
+  font-size: large;
+}
+
+#itemF {
+  grid-row: 3;
+  grid-column:  6;
+}
+
+@media screen and (max-width:767px) {
+  #itemF {
+    grid-row: 11;
+    grid-column: 2;
+  }
+}
+
+
+
+.triangle01 {
+  margin: 0 auto;
+  text-align: center;
+  /* padding: 8px 30px; */
+  /* width: 300px; */
+  display: block;
+  background-color: #c1a250;
+  background-color: #3b607f;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  height: 100%;
+}
+
+.triangle01::after {
+  content: "";
+  position: absolute;/* blockとabsoluteで独立←親要素にrelative */
+  display: block;
+  width: 150%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: white;
+  background: #d02727;
+  transform: translateX(-150%) skewX(-20deg); 
+  transition: 1s;
+}
+
+.triangle01 span {
+  position: relative;
+  z-index: 1;
+  color: white;
+  /* color: #d02727; */
+  font-weight: bold;
+  line-height: 180px;
+}
+
+.triangle01:hover .chenge {
+  color: #c1a250;
+  color: white;
+  /* background: #d02727; */
+}
+
+.triangle01:hover::after{
+  transform: translateX(-10%) skewX(-20deg);
+  transition: 20deg;
+}
+
+footer {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: black;
+  color: white;
+}
+
+.fadein:first-child {
+  opacity: 0;
+  transform : translate(0, 50px);
+  transition : all 1500ms;
+}
+.fadein:nth-child(2) {
+  opacity: 0;
+  transform : translate(0, 50px);
+  transition : all 1500ms;
+  transition-delay: 100ms;
+}
+.fadein:nth-child(3) {
+  opacity: 0;
+  transform : translate(0, 50px);
+  transition : all 1500ms;
+  transition-delay: 200ms;
+}
+.fadein:nth-child(4) {
+  opacity: 0;
+  transform : translate(0, 50px);
+  transition : all 1500ms;
+  transition-delay: 300ms;
+}
+
+.write.fadein {
+  opacity: 0;
+  transform : translate(0, 50px);
+  transition : all 1500ms;
+  /* transition-delay: 300ms; */
+}
+
+p.fadein {
+  opacity: 0;
+  transform : translate(0, 50px);
+  transition : all 1500ms;
+  transition-delay: 100ms;
+  
+}
+
+
+
+
+#container .fadein {
+  opacity: 0;
+  transform : translate(0, 50px);
+  transition : all 1500ms;
+  /* transition-delay: 100ms; */
+}
+#container .fadein:nth-child(2) {
+  opacity: 0;
+  transform : translate(0, 50px);
+  transition : all 1500ms;
+  transition-delay: 100ms;
+}
+#container .fadein:nth-child(3) {
+  opacity: 0;
+  transform : translate(0, 50px);
+  transition : all 1500ms;
+  transition-delay: 200ms;
+}
+/* #container .fadein:nth-child(5) {
+  opacity: 0;
+  transform : translate(0, 50px);
+  transition : all 1500ms;
+  transition-delay: 100ms;
+} */
+#container .fadein:nth-child(6) {
+  opacity: 0;
+  transform : translate(0, 50px);
+  transition : all 1500ms;
+  transition-delay: 200ms;
+}
+.fadein.scrollin{
+  opacity: 1;
+  transform: translate(0, 0);
+}
